@@ -113,7 +113,7 @@ h2 {
 }
 
 #Project {
-    height: 100vh;
+    
 }
 
 article {
@@ -147,9 +147,9 @@ hr {
     margin: 1rem;
 }
 
-#contact {
+/* #contact {
     margin-bottom: 5rem;
-}
+} */
 
 .container ul a:focus {
     border: none;
