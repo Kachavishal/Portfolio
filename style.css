@@ -200,6 +200,30 @@ select {
     transition: all 0.3s ease;
 }
 
+.theme-toggle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+    border: 2px solid var(--primary);
+    border-radius: 500px;
+    transition: all 0.3s ease;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999999;
+    margin: 5rem;
+    background-color: var(--primary-hover);
+    color: var(--primary-inverse);
+}
+
+.theme-toggle:hover {
+    cursor: pointer;
+}
+
+
 
 /*-------  media queries -----*/
 
@@ -224,6 +248,10 @@ select {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .theme-toggle {
+        display: none;
     }
 }
 
