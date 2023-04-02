@@ -39,7 +39,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding: 7rem;
+    scroll-padding: 8.5rem;
 }
 
 body {
@@ -111,6 +111,8 @@ a:hover {
 }
 
 /* ------- nav ------ */
+
+
 nav>ul {
     display: flex;
     flex-flow: row wrap;
@@ -118,13 +120,13 @@ nav>ul {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.6rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999999;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     background-color: var(--primary-inverse);
 }
 
@@ -223,6 +225,14 @@ select {
     cursor: pointer;
 }
 
+.theme-toggle svg{
+    fill: var(--primary-inverse);
+}
+
+p {
+    font-size: 1rem;
+    font-family: monospace;
+}
 
 
 /*-------  media queries -----*/
