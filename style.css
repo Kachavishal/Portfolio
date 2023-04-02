@@ -22,7 +22,7 @@
 }
 
 [data-theme="dark"] {
-    --primary: #888888;
+    --primary: #777777;
     --primary-hover: #FFF;
     --primary-focus: rgba(3, 155, 229, 0.125);
     --primary-inverse: #000000;
