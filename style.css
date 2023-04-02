@@ -22,7 +22,7 @@
 }
 
 [data-theme="dark"] {
-    --primary:  #888888;
+    --primary: #888888;
     --primary-hover: #FFF;
     --primary-focus: rgba(3, 155, 229, 0.125);
     --primary-inverse: #000000;
@@ -57,8 +57,8 @@ body {
 }
 
 svg {
-    width: 2rem;
-    height: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     fill: var(--primary);
 }
 
@@ -71,7 +71,11 @@ svg:hover {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+}
+
+.links svg:hover {
+    transform: scale(1.2);
 }
 
 ul {
@@ -100,7 +104,7 @@ a:hover {
     max-height: 100%;
     display: inline-block;
     transition: all 0.3s ease;
-    margin: 1rem;
+    margin: 2.4rem;
     font-size: 1.2rem;
 }
 
@@ -121,7 +125,7 @@ nav>ul {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.6rem;
+    padding: 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -148,16 +152,24 @@ nav>ul {
 
 h1 {
     font-family: monospace;
-    font-size: 3rem;
+    font-size: 7rem;
     color: var(--primary);
-}
-
-/* h3 {
+    align-items: center;
 }
 
 h2 {
-} */
+    font-size: 2.5rem;
+    margin: 2rem;
+}
 
+h3 {
+    font-size: 2rem;
+}
+
+.Home span{
+    font-size: 1.5rem;
+    align-items: center;
+}
 
 .divider {
     display: flex;
@@ -175,14 +187,6 @@ hr {
     border: 0.1px groove var(--primary-hover);
     width: 35%;
     margin: 0 auto;
-}
-
-article {
-    margin: 0 auto;
-    width: 1200px;
-    max-width: 100%;
-    padding: 1rem 0 1rem 0;
-    height: 100vh;
 }
 
 /* ---- footer ---- */
@@ -221,13 +225,16 @@ select {
     margin: 5rem;
     background-color: var(--primary-hover);
     color: var(--primary-inverse);
+
 }
 
 .theme-toggle:hover {
     cursor: pointer;
 }
 
-.theme-toggle svg{
+.theme-toggle svg {
+    width: 1.8rem;
+    height: 1.6rem;
     fill: var(--primary-inverse);
 }
 
