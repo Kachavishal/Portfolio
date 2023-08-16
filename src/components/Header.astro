@@ -1,25 +1,33 @@
 <div>
   <nav>
-    <h1><a href="#home">Vishal</a></h1>
-    <ul>
-      <li><a href="#project">Project</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="middle">
+      <h1><a href="#home">Vishal</a></h1>
+      <ul>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 </div>
 
 <style>
   nav {
+    position: fixed;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .middle {
     display: flex;
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    position: fixed;
-    background-color: black;
-    top: 0;
-    right: 0;
-    left: 0;
     max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -30,7 +38,7 @@
   }
 
   ul li {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   ul li a,
