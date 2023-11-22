@@ -1,7 +1,7 @@
 ---
-import Contact from "../components/Contact.astro";
 import Home from "../components/Home.astro";
 import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Vishal kacha | Portfolio">
@@ -9,19 +9,25 @@ import Layout from "../layouts/Layout.astro";
     <Home />
   </div>
 
-  <!-- <div class="project" id="project">
-    <h1>Project</h1>
+  <div class="project" id="project">
+    <h1>Projects</h1>
+    <Projects />
   </div>
-
-  <div class="contact" id="contact">
-    <Contact />
-  </div> -->
 </Layout>
 
 <style>
   .home,
-  .project,
-  .contact {
+  .project {
     height: 100vh;
+  }
+
+  .project h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
   }
 </style>

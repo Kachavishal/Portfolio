@@ -12,7 +12,26 @@
   <h1>Hi my name is Vishal</h1>
   <p>Web developer buildinng full stack applications.</p>
   <p class="p2">Using web framework <span id="frameworkDisplay">React</span></p>
-  <a class="project-button" href="/project">projects</a>
+  <a class="project-button" href="#project">projects</a>
+  <div class="contact-link">
+    <ul>
+      <li>
+        <a href="https://github.com/vishal-kacha"
+          ><img src="github.svg" alt="" /></a
+        >
+      </li>
+      <li><a href="https://www.linkedin.com/in/vishal-kacha-32918b247"><img src="linkedin.svg" alt="" /></a></li>
+      <li>
+        <a href="https://twitter.com/vishal__kacha"
+          ><img src="x.svg" alt="" /></a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/visha_lkacha/"
+          ><img src="instagram.svg" alt="" /></a
+        >
+      </li>
+    </ul>
+  </div>
 </div>
 
 <script is:inline>
@@ -60,14 +79,17 @@
     font-size: 6rem;
     font-family: Geist-Bold;
     letter-spacing: -1px;
+    text-align: center;
   }
 
   p {
     font-size: 3rem;
+    text-align: center;
   }
 
   .p2 {
     font-size: 2.6rem;
+    text-align: center;
   }
 
   a {
@@ -78,15 +100,13 @@
     background-color: #fff;
     color: #000;
     cursor: pointer;
-    opacity: 0.8
+    opacity: 0.8;
   }
 
   a:hover {
     transition: all 0.5s ease-in-out;
     opacity: 1;
   }
-
-
 
   #frameworkDisplay {
     color: rgb(19, 158, 202);
@@ -124,10 +144,10 @@
   .nextjs-logo {
     top: 75%;
     right: 15%;
-    animation: updown 10s linear infinite reverse;
+    animation: updown 6s linear infinite reverse 1.5s;
     opacity: 0.5;
     transition: all 0.5s ease;
-    filter: drop-shadow(0 0 5px #fff);
+    filter: drop-shadow(0 0 3px #fff);
   }
 
   @keyframes updown {
@@ -203,10 +223,52 @@
       font-size: 1.4rem;
     }
 
-
     .astro-logo {
       display: none;
     }
   }
 
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    .p2 {
+      font-size: 1.2rem;
+    }
+
+    a {
+      font-size: 1.1rem;
+    }
+  }
+
+  .contact-link ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  .contact-link ul li a {
+    all: unset;
+    padding: 0 1rem;
+    color: #000;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .contact-link ul li a:hover {
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+  }
+
+  .contact-link ul li a img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 </style>
