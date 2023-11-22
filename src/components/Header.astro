@@ -3,7 +3,7 @@
     <div class="middle">
       <h1><a href="/">Vishal</a></h1>
       <ul>
-        <li><a href="#project">Project</a></li>
+        <li><a href="#project">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -12,15 +12,15 @@
 
 <style>
   nav {
-    position: fixed;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(8px);
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.85);    
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 100;
   }
 
   .middle {
@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 90%;
     margin: 0 auto;
   }
@@ -43,14 +43,24 @@
     padding: 0 0 0 2rem;
   }
 
-  ul li a,
-  nav h1 a {
+  ul li a {
     text-decoration: none;
-    color: white;
+    color: #a1a1aa;
   }
 
-  h1{
-    /* letter-spacing: 0.1rem; */
+  ul li a {
+    font-size: 1.2rem;
+  }
+
+  ul li a:hover {
+    color: #fff;
+  }
+
+  h1, h1 a {
     font-size: xx-large;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    text-decoration: none;
   }
 </style>
