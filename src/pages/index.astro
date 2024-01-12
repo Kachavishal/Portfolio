@@ -2,6 +2,7 @@
 import Home from "../components/Home.astro";
 import Layout from "../layouts/Layout.astro";
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Vishal kacha | Portfolio">
@@ -13,21 +14,35 @@ import Projects from "../components/Projects.astro";
     <h1>Projects</h1>
     <Projects />
   </div>
+
+  <!-- <div class="contact" id="contact">
+    <h1>Contact</h1>
+    <Contact />
+  </div> -->
 </Layout>
 
 <style>
   .home,
-  .project {
+  .contact {
     height: 100vh;
   }
 
-  .project h1 {
+  .project h1,
+  .contact h1 {
     text-align: center;
     margin: 0;
     padding: 0;
     font-size: 3rem;
     font-weight: 700;
     color: #fff;
+    padding-top: 4rem;
     margin-bottom: 2rem;
+  }
+
+  .contact {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 4rem;
   }
 </style>
