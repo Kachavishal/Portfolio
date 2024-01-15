@@ -15,18 +15,18 @@ import Contact from "../components/Contact.astro";
     <Projects />
   </div>
 
-  <!-- <div class="contact" id="contact">
+  <div class="contact" id="contact">
     <h1>Contact</h1>
     <Contact />
-  </div> -->
+  </div>
 </Layout>
 
 <style>
   .home,
-  .contact,
-  .project {
+  .contact {
     height: 100vh;
   }
+
 
   .project h1,
   .contact h1 {
@@ -37,13 +37,20 @@ import Contact from "../components/Contact.astro";
     font-weight: 700;
     color: #fff;
     padding-top: 4rem;
+  }
+
+  .project h1 {
     margin-bottom: 2rem;
+  }
+
+  .contact h1 {
+    margin-bottom: 4rem;
   }
 
   .contact {
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
-    padding-top: 4rem;
+    width: 100%;
+    justify-content: center;
   }
 </style>
