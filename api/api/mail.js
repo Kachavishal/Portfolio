@@ -4,22 +4,18 @@ export default async function handler(request, response) {
   const transporter = createTransport({
     service: "gmail",
     auth: {
-      user: "vishalkacha740@gmail.com",
-      pass: "dyii zpyx reqz hyfp",
+      user: process.env.GMAIL,
+      pass: process.env.MAIL_APP_PASS,
     },
   });
 
   const info = await transporter.sendMail({
-    from: "vishalkacha740@gmail.com", // sender address
-    to: "vishalkacha5@gmail.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    from: process.env.GMAIL,
+    to: process.env.GMAIL,
+    subject: "Message From portfolio",
+    text: "",
+    html: "<b>Hello world?</b>",
   });
 
-  console.log(info.messageId);
-
-  const { name = "World" } = request.query;
-
-  return response.send(`hello`);
+  return response.send(`Message send`);
 }
