@@ -17,5 +17,5 @@ export default async function handler(request, response) {
     html: "<b>Hello world?</b>",
   });
 
-  return response.send(`Message send`);
+  return response.send(process.env.GMAIL);
 }
