@@ -3,12 +3,12 @@
 ---
 
 <div class="contact-div">
-  <form action="">
+  <form>
     <label for="email">
       <input
         type="email"
-        name="number"
-        id="number"
+        name="email"
+        id="email"
         placeholder="Enter your email"
       />
     </label>
@@ -33,6 +33,26 @@
     <button>Send message</button>
   </form>
 </div>
+
+<script>
+  let button = document.getElementsByTagName("button")[0];
+  let form = document.getElementsByTagName("form")[0];
+  button.addEventListener("click", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const formDataObj = { email: "", number: "", message: "" };
+    formData.forEach((value, key) => (formDataObj[key] = value));
+    let { email, number, message } = formDataObj;
+
+    await fetch(
+      `https://protfolio-mail.vercel.app/api/mail?email=${email}&number=${number}&message=${message}`,
+      {
+        method: "POST",
+      }
+    );
+  });
+</script>
 
 <style>
   .contact-div form {
@@ -81,6 +101,7 @@
     width: 90%;
     max-width: 500px;
     opacity: 0.8;
+    cursor: pointer;
   }
 
   button:hover {
@@ -88,9 +109,10 @@
   }
 
   @media (max-width: 700px) {
-    input, label, textarea {
-        padding: 0.6rem;
+    input,
+    label,
+    textarea {
+      padding: 0.6rem;
     }
-
   }
 </style>

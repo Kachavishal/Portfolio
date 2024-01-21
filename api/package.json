@@ -11,9 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/uuid": "^9.0.7",
     "@vercel/node": "^3.0.16"
   },
   "dependencies": {
-    "nodemailer": "^6.9.8"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.8",
+    "uuid": "^9.0.1"
   }
 }

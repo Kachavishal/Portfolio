@@ -1,6 +1,14 @@
 import { createTransport } from "nodemailer";
 
-export default async function handler(request, response) {
+import express from "express";
+import cors from "cors";
+
+const app = express();
+app.use(cors());
+
+app.post("/api/mail", async (req, res) => {
+  let { email, number, message } = req.query;
+
   const transporter = createTransport({
     service: "gmail",
     auth: {
@@ -14,8 +22,12 @@ export default async function handler(request, response) {
     to: process.env.GMAIL,
     subject: "Message From portfolio",
     text: "",
-    html: "<b>Hello world?</b>",
+    html: `<div>
+      email: ${email}
+      number: ${number}
+      message: ${message}
+    <div>`,
   });
+});
 
-  return response.send(process.env.GMAIL);
-}
+export default app;
