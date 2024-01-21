@@ -28,6 +28,8 @@ app.post("/api/mail", async (req, res) => {
       message: ${message} </br>
     <div>`,
   });
+
+  res.send('ok')
 });
 
 export default app;
