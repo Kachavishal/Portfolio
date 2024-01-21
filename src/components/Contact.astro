@@ -9,6 +9,7 @@
         type="email"
         name="email"
         id="email"
+        required
         placeholder="Enter your email"
       />
     </label>
@@ -32,9 +33,14 @@
 
     <button>Send message</button>
   </form>
+
+  <div class="relative">
+    <div class="hidden">Message send</div>
+    <div class="hidden">Error occured not send</div>
+  </div>
 </div>
 
-<script>
+<script is:inline>
   let button = document.getElementsByTagName("button")[0];
   let form = document.getElementsByTagName("form")[0];
   button.addEventListener("click", async (e) => {
@@ -45,12 +51,27 @@
     formData.forEach((value, key) => (formDataObj[key] = value));
     let { email, number, message } = formDataObj;
 
-    await fetch(
+    let res = await fetch(
       `https://protfolio-mail.vercel.app/api/mail?email=${email}&number=${number}&message=${message}`,
       {
         method: "POST",
       }
     );
+
+    form.reset();
+
+    let result = document.querySelector(".relative");
+    if (res.status == 200) {
+      result.children[0].setAttribute("class", "success");
+      setTimeout(() => {
+        result.children[0].setAttribute("class", "hidden");
+      }, 2000);
+    } else {
+      result.children[1].setAttribute("class", "fail");
+      setTimeout(() => {
+        result.children[0].setAttribute("class", "hidden");
+      }, 2000);
+    }
   });
 </script>
 
@@ -114,5 +135,34 @@
     textarea {
       padding: 0.6rem;
     }
+  }
+
+  .success {
+    background-color: #86efac;
+    color: #022c22;
+  }
+
+  .fail {
+    background-color: #ef4444;
+    color: #450a0a;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .success,
+  .fail {
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    opacity: 0.9;
+  }
+
+  .hidden {
+    display: none;
   }
 </style>

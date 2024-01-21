@@ -23,9 +23,9 @@ app.post("/api/mail", async (req, res) => {
     subject: "Message From portfolio",
     text: "",
     html: `<div>
-      email: ${email}
-      number: ${number}
-      message: ${message}
+      email: ${email} </br>
+      number: ${number} </br>
+      message: ${message} </br>
     <div>`,
   });
 });
