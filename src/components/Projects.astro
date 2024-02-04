@@ -1,17 +1,21 @@
+---
+
+---
+
 <div class="project-cards">
   <div class="cards">
-    <div class="info">
+    <div class="info" transition:animate="initial" transition:name="img">
       <h3>File share app</h3>
       <div>
         <ul>
           <li>
             <a href="https://github.com/vishal-kacha/file-share" target="_blank"
-              ><img src="github.svg" alt="" /></a
+              ><img src="/github.svg" alt="" /></a
             >
           </li>
           <li>
             <a href="https://file-share-vishal.vercel.app" target="_blank"
-              ><img src="link.svg" alt="" /></a
+              ><img src="/link.svg" alt="" /></a
             >
           </li>
         </ul>
@@ -19,78 +23,34 @@
       <p class="description">
         Nextjs app to share files with other users using link.
       </p>
-      <img class="infoimg" src="fileupload.png" alt="" />
+      <a href="/projects/fileshare" ><img class="infoimg" src="/fileupload.png" alt="" /></a>
     </div>
   </div>
 
-  <div class="cards">
-    <div class="info">
-      <h3>College Site clone</h3>
-      <div>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/vishal-kacha/College-site-clone"
-              target="_blank"><img src="github.svg" alt="" /></a
-            >
-          </li>
-          <li>
-            <a href="https://tcsc-site-clone.netlify.app/" target="_blank"
-              ><img src="link.svg" alt="" /></a
-            >
-          </li>
-        </ul>
-        <p>College site clone using react and supabase.</p>
-        <img class="infoimg" src="collegesite.png" alt="" />
-      </div>
-    </div>
-  </div>
+
 
   <div class="cards">
-    <div class="info">
-      <h3>Gender Equity</h3>
-      <div>
-        <ul>
-          <li>
-            <a
-              href="https://github.com/vishal-kacha/gender-equity"
-              target="_blank"><img src="github.svg" alt="" /></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://vishal-kacha.github.io/gender-equity/"
-              target="_blank"><img src="link.svg" alt="" /></a
-            >
-          </li>
-        </ul>
-        <p>A site to show importance of Gender Equity.</p>
-        <img class="infoimg" src="genderequity.png" alt="" />
-      </div>
-    </div>
-  </div>
-
-  <div class="cards">
-    <div class="info">
+    <div class="info" transition:animate="initial" transition:name="img2">
       <h3>Todo app</h3>
       <div>
         <ul>
           <li>
             <a href="https://github.com/vishal-kacha/React-todo" target="_blank"
-              ><img src="github.svg" alt="" /></a
+              ><img src="/github.svg" alt="" /></a
             >
           </li>
           <li>
             <a href="https://todo-app-vishal.netlify.app/" target="_blank"
-              ><img src="link.svg" alt="" /></a
+              ><img src="/link.svg" alt="" /></a
             >
           </li>
         </ul>
         <p>Mern stack Todo app.</p>
-        <img class="infoimg" src="todoapp.png" alt="" />
+       <a href="/projects/todoapp" ><img class="infoimg" src="/todoapp.png" alt="" /></a>
       </div>
     </div>
   </div>
+
 </div>
 
 <style>
@@ -114,10 +74,7 @@
   @media (min-width: 1350px) {
     .project-cards {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
       flex-wrap: wrap;
-      height: 100vh;
     }
 
     .cards {
@@ -125,35 +82,15 @@
       height: 380px;
       background-color: #18181b;
       border-radius: 10px;
-      position: absolute;
       transition: 1.3s ease-in-out;
       box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
-    }
-
-    .cards:nth-child(1) {
-      transform: translate(-400px, -30px);
-    }
-
-    .cards:nth-child(2) {
-      transform: translate(20px, 200px);
-    }
-
-    .cards:nth-child(3) {
-      transform: translate(30px, -200px);
-    }
-
-    .cards:nth-child(4) {
-      transform: translate(450px, 20px);
     }
   }
 
   @media (min-width: 1024px) and (max-width: 1349px) {
     .project-cards {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
       flex-wrap: wrap;
-      height: 100vh;
     }
 
     .cards {
@@ -161,24 +98,7 @@
       height: 380px;
       background-color: #18181b;
       border-radius: 10px;
-      position: absolute;
       transition: 1.3s ease-in-out;
-    }
-
-    .cards:nth-child(1) {
-      transform: translate(-250px, -30px);
-    }
-
-    .cards:nth-child(2) {
-      transform: translate(-200px, 400px);
-    }
-
-    .cards:nth-child(3) {
-      transform: translate(200px, -200px);
-    }
-
-    .cards:nth-child(4) {
-      transform: translate(250px, 200px);
     }
   }
 
@@ -205,7 +125,7 @@
 
   .infoimg {
     width: 100%;
-    height: 55%;
+    height: 70%;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;

@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 app.post("/api/mail", async (req, res) => {
-  let { email, number, message } = req.query;
+  const { email, number, message } = req.query;
 
   const transporter = createTransport({
     service: "gmail",
@@ -17,7 +17,7 @@ app.post("/api/mail", async (req, res) => {
     },
   });
 
-  const info = await transporter.sendMail({
+  await transporter.sendMail({
     from: process.env.GMAIL,
     to: process.env.GMAIL,
     subject: "Message From portfolio",
