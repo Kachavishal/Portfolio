@@ -4,8 +4,13 @@
 
 body {
   font-family: Helvetica, sans-serif;
+  @apply text-zinc-600;
 }
 
 span {
   @apply text-xl;
+}
+
+a:hover {
+  @apply text-black;
 }

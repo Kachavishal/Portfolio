@@ -2,7 +2,7 @@
 	import '../app.css';
 </script>
 
-<div class="bg-zinc-50 border">
+<div class="bg-zinc-50 border fixed w-[100vw] backdrop-blur-sm bg-white/70 shadow">
 	<nav class="max-w-screen-xl m-auto p-4 flex justify-between items-center">
 		<h1 class="text-lg">
 			<a href="/"> VISHAL KACHA </a>
@@ -13,4 +13,6 @@
 	</nav>
 </div>
 
-<slot />
+<div class="pt-[60px]">
+	<slot />
+</div>

@@ -1,16 +1,24 @@
+<svelte:head>
+	<title>VISHAL KACHA</title>
+</svelte:head>
+
 <div class="bg-sky-50">
-	<div class="max-w-[1200px] mx-auto min-h-80 flex justify-center items-center">
+	<div
+		class="max-w-[1200px] mx-auto min-h-80 flex lg:flex-row flex-col justify-center items-center"
+	>
 		<div class="m-4 p-4 flex justify-center items-center">
 			<img
 				src="/vishal.jpg"
 				alt="Portrait of Vishal Kacha"
-				class="w-full rounded-full object-cover"
+				class="w-full min-w-52 max-w-52 rounded-full object-cover"
 			/>
 		</div>
-		<div class="m-4 p-4 flex flex-col justify-start content-center">
+		<div
+			class="m-4 p-4 flex flex-col justify-center items-center lg:items-start lg:justify-start content-center"
+		>
 			<h1 class="text-3xl mb-1">VISHAL KACHA</h1>
 			<h3 class="text-xl mb-2">Software Developer</h3>
-			<p class="mb-4 text-[18px]">
+			<p class="mb-4 text-[18px] text-center lg:text-left">
 				As a highly skilled and passionate developer, I am currently working on a range of exciting
 				and ambitious projects. My focus is on creating innovative solutions and pushing the
 				boundaries of what's possible with technology.
@@ -47,8 +55,8 @@
 <!-- Projects section -->
 <div class="max-w-[1200px] m-auto mb-12">
 	<h1 class="m-8 text-center text-3xl border-b p-4">PROJECTS</h1>
-	<div class="flex flex-wrap justify-evenly">
-		<div class="max-w-[33%]">
+	<div class="flex flex-wrap justify-evenly items-start">
+		<div class="m-4">
 			<div>
 				<div class="w-80 h-96 bg-zinc-300"></div>
 				<p class="text-3xl py-2">title</p>
@@ -60,7 +68,7 @@
 			</div>
 		</div>
 
-		<div class="max-w-[33%]">
+		<div class="m-4">
 			<div>
 				<div class="w-80 h-96 bg-zinc-300"></div>
 				<p class="text-3xl py-2">title</p>
@@ -72,7 +80,7 @@
 			</div>
 		</div>
 
-		<div class="max-w-[33%]">
+		<div class="m-4">
 			<div>
 				<div class="w-80 h-96 bg-zinc-300"></div>
 				<p class="text-3xl py-2">title</p>
